@@ -15,7 +15,6 @@ export const useBlogPosts = (): ApiResponse<BlogPost[]> & {
       setError(null);
       const posts = await apiCall<BlogPost[]>(API_BASE_URL);
 
-      // Sort by createdAt descending (newest first)
       const sortedPosts = posts.sort(
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()

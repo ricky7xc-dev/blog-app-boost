@@ -8,7 +8,6 @@ import { BlogList } from "@/components/features/BlogList";
 import { useBlogPosts } from "@/hooks";
 import { Loader } from "lucide-react";
 
-// Main App Component
 const Home = () => {
   const { data: dataFetch, loading, error } = useBlogPosts();
 
